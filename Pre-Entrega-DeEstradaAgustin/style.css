@@ -1,3 +1,84 @@
-div{
-    margin: 20px 10px;
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+nav{
+    align-self: center;
+}
+
+h2{
+    align-self: center;
+    font-size: 36px;
+    margin: 20px 0px 20px 20px;
+    color: bisque;
+}
+
+.nav-bar{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin-right: 60px;
+    font-size: 25px;
+    color: crimson;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url('../Pre-Entrega-DeEstradaAgustin/public/aviciiconcert.jpg')
+}
+
+.section{
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 30%;
+    height: fit-content;
+}
+
+input{
+    font-size: 22px;
+    width: 70%;
+    margin-top: 25px;
+    align-self: center;
+    border: none;
+    border-bottom: solid 1px;
+}
+
+.div-input{
+    width: 10%;
+    margin-top: 25px;
+    align-self: center;
+}
+
+label{
+    width: fit-content;
+}
+
+.radio{
+    width: fit-content;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-submit{
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 25px;
 }

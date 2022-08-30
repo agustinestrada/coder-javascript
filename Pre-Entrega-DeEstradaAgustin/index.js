@@ -1,7 +1,7 @@
 let leMetioOnda = false
 let nombre, apellido, apodo, edad
 let saludo = document.querySelector('h1.saludo')
-
+/* 
 while (!leMetioOnda) {
     nombre = prompt('Por favor ingresa solo tu nombre')
     apellido = prompt('Por favor ingresa tu apellido')
@@ -19,7 +19,7 @@ while (!leMetioOnda) {
     if(!leMetioOnda){
         alert('Ponele volunta daale ponele voluntaa')
     }
-}
+} */
 
 let usuario = {
     nombre,
@@ -34,7 +34,7 @@ let apodoDato = document.querySelector('div span.apodo')
 let edadDato = document.querySelector('div span.edad')
 
 if (apodo) {
-    alert('Hola '+apodo+' nos encantaria que aportes tu '+edad+' años de sabiduría en esto!')
+    //alert('Hola '+apodo+' nos encantaria que aportes tu '+edad+' años de sabiduría en esto!')
     saludo.innerHTML = 'Hola ' + apodo
  
     nombreDato.innerHTML = 'Nombre: ' + usuario.nombre
@@ -43,7 +43,7 @@ if (apodo) {
     edadDato.innerHTML = 'Edad: ' + usuario.edad
 
 }else{
-    alert('Hola '+nombre+' '+apellido+' nos encantaria que aportes tu '+edad+' años de sabiduría en esto!')    
+    //alert('Hola '+nombre+' '+apellido+' nos encantaria que aportes tu '+edad+' años de sabiduría en esto!')    
     saludo.innerHTML = 'Hola ' + nombre + ' ' + apellido
 
     nombreDato.innerHTML = 'Nombre: ' + usuario.nombre
