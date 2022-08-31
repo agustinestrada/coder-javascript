@@ -40,8 +40,6 @@ form.addEventListener('submit', (e) => {
     let apellidoError = document.querySelector('.apellido-error')
     let emailError = document.querySelector('.email-error')
 
-
-
     if(nombre.value == ''){
         e.preventDefault()
         nombreError.innerHTML = 'El campo de nombre tiene que estar completo'
