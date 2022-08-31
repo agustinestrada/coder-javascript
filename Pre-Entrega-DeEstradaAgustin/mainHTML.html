@@ -12,32 +12,53 @@
         <h2>Agustin de Estrada</h2>
         <nav>
             <ul class="nav-bar">
-                <li>Home</li>
-                <li>Ofertas</li>
-                <li>Newsletter</li>
-                <li>Contacto</li>    
+                <li class="home">Home</li>
+                <li class="ofertas">Ofertas</li>
+                <li class="newsletter">Newsletter</li>
+                <li class="contacto">Contacto</li>    
             </ul>
         </nav>
     </header>
+    
     <main>
         <section class="section">
-            <form action="" method="post">
+            <form action="/" method="post">
                 <input type="text" class="nombre" placeholder="Nombre">
+                <span class="nombre-error error"></span>
                 <input type="text" class="apellido" placeholder="apellido">
+                <span class="apellido-error error"></span>
                 <input type="text" class="email" placeholder="email">
+                <span class="email-error error"></span>
                 <div class="div-input">
-                    <label for="si">Si</label>
-                    <input type="radio" id="si" name="si" class="radio" placeholder=e">
-                    <label for="no">No</label>
-                    <input type="radio" id="no" name="no" class="radio">
+                    <span>Queres suscribirte?</span>
+                    <select name="suscripcion" id="suscripcion">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                
+                <span>Por favor ingresa tu idioma</span>
+                <div>
+                    <select name="idioma" id="idioma">
+                        <option value="en">English</option>
+                        <option value="fr">Française</option>
+                        <option value="es">Español</option>
+                    </select>
                 </div>
                 
                 <input type="submit" class="btn-submit">
             </form>
         </section>
     </main>
-    <footer>
 
+    <footer>
+        <h2>Agustin de Estrada</h2>
+        <nav>
+            <ul class="nav-bar">
+                <li class="home"><a href="https://github.com/agustinestrada">Github</a></li>
+                <li class="ofertas"><a href="https://www.linkedin.com/in/agust%C3%ADn-de-estrada-65a4b58b/">Linkedin</a></li> 
+            </ul>
+        </nav>
     </footer>
 
 

@@ -1,6 +1,81 @@
-let leMetioOnda = false
-let nombre, apellido, apodo, edad
-let saludo = document.querySelector('h1.saludo')
+let form = document.querySelector('form')
+const preferencia = {}
+let home = document.querySelector('.home')
+let ofertas = document.querySelector('.ofertas')
+let newsletter = document.querySelector('.newsletter')
+let contacto = document.querySelector('.contacto')
+
+let idiomaElegido = localStorage.getItem('idioma')
+
+if (idiomaElegido != '' && idiomaElegido != null) {
+    switch (idiomaElegido) {
+        case 'en':
+            ofertas.innerHTML = 'Sale!'
+            contacto.innerHTML = 'Contact'
+            break;
+        case 'fr':
+            ofertas.innerHTML = 'Offres!'
+            contacto.innerHTML = 'Contact'
+            home.innerHTML = 'Principal'
+            newsletter.innerHTML = 'Bulletin'
+            break;
+        case 'es':
+            home.innerHTML = 'Principal'
+            newsletter.innerHTML = 'Suscripcion'
+            break
+        default:
+            break;
+    }
+}
+
+form.addEventListener('submit', (e) => {
+    
+    let nombre = document.querySelector('.nombre')
+    let apellido = document.querySelector('.apellido')
+    let email = document.querySelector('.email')
+    let suscripcion = document.querySelector('#suscripcion')
+    let idioma = document.querySelector('#idioma')
+
+    let nombreError = document.querySelector('.nombre-error')
+    let apellidoError = document.querySelector('.apellido-error')
+    let emailError = document.querySelector('.email-error')
+
+
+
+    if(nombre.value == ''){
+        e.preventDefault()
+        nombreError.innerHTML = 'El campo de nombre tiene que estar completo'
+        nombre.classList.add('input-error')
+    }
+    
+    if(apellido.value == ''){
+        e.preventDefault()
+        apellidoError.innerHTML = 'El campo de apellido tiene que estar completo'
+        apellido.classList.add('input-error')
+    }
+
+    if(email.value == ''){
+        e.preventDefault()
+        emailError.innerHTML = 'El campo de email tiene que estar completo'
+        email.classList.add('input-error')
+    }
+
+    preferencia.idioma = idioma.value
+
+    localStorage.setItem('idioma',preferencia.idioma)
+
+    console.log(suscripcion.value);
+    console.log(idioma.value);
+
+
+
+})
+
+
+
+
+//console.log('este es un mensaje para los que saben abrir la consola... SHHH!!');
+
 /* 
 while (!leMetioOnda) {
     nombre = prompt('Por favor ingresa solo tu nombre')
@@ -20,38 +95,3 @@ while (!leMetioOnda) {
         alert('Ponele volunta daale ponele voluntaa')
     }
 } */
-
-let usuario = {
-    nombre,
-    apellido,
-    apodo,
-    edad
-}
-
-let nombreDato = document.querySelector('div span.nombre')
-let apellidoDato = document.querySelector('div span.apellido')
-let apodoDato = document.querySelector('div span.apodo')
-let edadDato = document.querySelector('div span.edad')
-
-if (apodo) {
-    //alert('Hola '+apodo+' nos encantaria que aportes tu '+edad+' años de sabiduría en esto!')
-    saludo.innerHTML = 'Hola ' + apodo
- 
-    nombreDato.innerHTML = 'Nombre: ' + usuario.nombre
-    apellidoDato.innerHTML = 'Apellido: ' + usuario.apellido
-    apodoDato.innerHTML = 'Apodo: ' + usuario.apodo
-    edadDato.innerHTML = 'Edad: ' + usuario.edad
-
-}else{
-    //alert('Hola '+nombre+' '+apellido+' nos encantaria que aportes tu '+edad+' años de sabiduría en esto!')    
-    saludo.innerHTML = 'Hola ' + nombre + ' ' + apellido
-
-    nombreDato.innerHTML = 'Nombre: ' + usuario.nombre
-    apellidoDato.innerHTML = 'Apellido: ' + usuario.apellido
-    apodoDato.innerHTML = 'Apodo: El usuario no eligio apodo'
-    edadDato.innerHTML = 'Edad: ' + usuario.edad
-}
-
-console.log('este es un mensaje para los que saben abrir la consola... SHHH!!');
-
-console.log(usuario);

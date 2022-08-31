@@ -38,7 +38,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 85vh;
     background-image: url('../Pre-Entrega-DeEstradaAgustin/public/aviciiconcert.jpg')
 }
 
@@ -58,8 +58,8 @@ input{
 }
 
 .div-input{
-    width: 10%;
-    margin-top: 25px;
+    width: 50%;
+    
     align-self: center;
 }
 
@@ -74,6 +74,8 @@ label{
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-submit{
@@ -81,4 +83,39 @@ form{
     background-color: black;
     border-radius: 5px;
     margin-bottom: 25px;
+}
+
+.error{
+    margin-top: 10px;
+    font-weight: bold;
+    color: red;
+    width: 75%;
+}
+
+.input-error{
+    border: red 1px;
+    box-shadow: 5px 5px 20px red ;  
+}
+
+select{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    
+}
+
+select#idioma{
+    margin-top: 25px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+a, a:visited{
+    color: inherit;
+    text-decoration: none
 }
