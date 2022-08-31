@@ -59,37 +59,5 @@ form.addEventListener('submit', (e) => {
     }
 
     preferencia.idioma = idioma.value
-
     localStorage.setItem('idioma',preferencia.idioma)
-
-    console.log(suscripcion.value);
-    console.log(idioma.value);
-
-
-
 })
-
-
-
-
-//console.log('este es un mensaje para los que saben abrir la consola... SHHH!!');
-
-/* 
-while (!leMetioOnda) {
-    nombre = prompt('Por favor ingresa solo tu nombre')
-    apellido = prompt('Por favor ingresa tu apellido')
-    apodo = prompt('De ahora en mas, queres que te llamemos por tu nombre o preferís un apodo. Si es así por favor ingresalo acá')
-    edad = parseInt(prompt('Por favor introduzca su edad'))
-    leMetioOnda = true
-    
-    let variablesAChequear = [nombre,apellido,edad]
-    variablesAChequear.forEach(element => {
-        if(element == '' || element == null || isNaN(edad)){
-        leMetioOnda = false
-        }
-    })
-
-    if(!leMetioOnda){
-        alert('Ponele volunta daale ponele voluntaa')
-    }
-} */
